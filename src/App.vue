@@ -63,7 +63,10 @@ const phonePlaceholder = '+49 (0) 89 / 224 106 22'
         Unsere Wirksamkeit ist wissenschaftlich bestätigt.
       </span>
       <span style="font-size: 8pt; font-family: 'Arial', sans-serif; color: #ec733b">
-        <a href="https://rockyourlife.de/das-machen-wir/wirkung/">
+        <a
+          href="https://rockyourlife.de/das-machen-wir/wirkung/"
+          style="text-decoration: none; text-underline: none"
+        >
           <span style="color: #ec733b">Mehr erfahren</span>
         </a>
       </span>
@@ -72,7 +75,10 @@ const phonePlaceholder = '+49 (0) 89 / 224 106 22'
         Lust, uns zu unterstützen?&nbsp;
       </span>
       <span style="font-size: 8pt; font-family: 'Arial', sans-serif; color: #ec733b">
-        <a href="https://rockyourlife.de/jetzt-spenden/?rock-your-life-ggmbh-3/spende">
+        <a
+          href="https://rockyourlife.de/jetzt-spenden/?rock-your-life-ggmbh-3/spende"
+          style="text-decoration: none; text-underline: none"
+        >
           <span style="color: #ec733b">Hier</span>
         </a>
       </span>
@@ -84,10 +90,11 @@ const phonePlaceholder = '+49 (0) 89 / 224 106 22'
     <p class="MsoNormal" style="margin-bottom: 8pt">
       <span style="font-size: 8pt; font-family: 'Arial', sans-serif; color: #ec733b">Mail:</span
       ><span style="font-size: 8pt; font-family: 'Arial', sans-serif; color: #7f7f7f"
-        >&nbsp;&nbsp;&nbsp;<a :href="'mailto:' + email">
-          <span style="color: #7f7f7f; text-decoration: none; text-underline: none">{{
-            email || emailPlaceholder
-          }}</span></a
+        >&nbsp;&nbsp;&nbsp;<a
+          style="text-decoration: none; text-underline: none"
+          :href="'mailto:' + email"
+        >
+          <span style="color: #7f7f7f">{{ email || emailPlaceholder }}</span></a
         ><br /> </span
       ><span style="font-size: 8pt; font-family: 'Arial', sans-serif; color: #ec733b"
         >Mobil&nbsp;&nbsp;</span
@@ -99,7 +106,7 @@ const phonePlaceholder = '+49 (0) 89 / 224 106 22'
       ><span style="font-size: 8pt; font-family: 'Arial', sans-serif; color: #ec733b"
         >Web:&nbsp;&nbsp;</span
       ><span style="font-size: 8pt; font-family: 'Arial', sans-serif; color: #7f7f7f"
-        ><a href="http://www.rockyourlife.de/"
+        ><a href="http://www.rockyourlife.de/" style="text-decoration: none; text-underline: none"
           ><span style="color: #7f7f7f; text-decoration: none; text-underline: none"
             >www.rockyourlife.de</span
           ></a
