@@ -3,12 +3,16 @@ import { ref } from 'vue'
 
 const firstName = ref('')
 const firstNamePlaceholder = 'Stafan'
+
 const lastName = ref('')
 const lastNamePlaceholder = 'Schabernak'
+
 const position = ref('')
 const positionPlaceholder = 'Geschäftsführer'
+
 const email = ref('')
 const emailPlaceholder = 'stefan.schabernak@rockyourlife.de'
+
 const phone = ref('')
 const phonePlaceholder = '+49 (0) 89 / 224 106 22'
 </script>
