@@ -1,4 +1,15 @@
 :root {
+  --color-orange-100: #e84610;
+  --color-orange-80: #ce7955;
+  --color-shakemint-100: #abd4ba;
+  --color-shakemint-80: #c7d9c8;
+  --color-jeansblue-100: #344e95;
+  --color-iropink-100: #e9a09c;
+  --color-iropink-80: #dcb8b3;
+  --color-schoolgreen-100: #23372c;
+  --color-schoolgreen-80: #545c56;
+
+  --gradient: linear-gradient(-45deg, #e84610 0%, #e9a09c 100%);
 }
 
 *,
