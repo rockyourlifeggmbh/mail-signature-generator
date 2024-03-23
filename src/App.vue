@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import SignaturePreview from './components/SignaturePreview.vue'
 
 const firstName = ref('')
 const firstNamePlaceholder = 'Stafan'
@@ -15,10 +16,6 @@ const emailPlaceholder = 'stefan.schabernak@rockyourlife.de'
 
 const phone = ref('')
 const phonePlaceholder = '+49 (0) 89 / 224 106 22'
-
-const defaultFontStyle = "font-size: 8pt; font-family: 'Arial', sans-serif; color: #7f7f7f;"
-const linkStyle = 'text-decoration: none; text-underline: none;'
-const highlightColor = 'color: #ec733b;'
 </script>
 
 <template>
@@ -36,69 +33,18 @@ const highlightColor = 'color: #ec733b;'
   </header>
 
   <main>
-    <p style="margin-bottom: 8pt">
-      <span :style="defaultFontStyle + 'font-size: 10pt; color: black'">
-        {{ firstName || firstNamePlaceholder }} {{ lastName || lastNamePlaceholder }}
-      </span>
-      <br />
-      <span :style="defaultFontStyle">
-        {{ position || positionPlaceholder }}
-      </span>
-    </p>
-
-    <p style="margin-bottom: 8pt">
-      <img width="115" src="./assets/logo.jpeg" style="margin: 4pt 0" />
-      <br />
-      <span :style="defaultFontStyle + highlightColor + 'font-weight: bold'">
-        ROCK YOUR LIFE! gGmbH
-      </span>
-      <br />
-      <span :style="defaultFontStyle">Developing potentials since 2008.</span>
-    </p>
-
-    <p style="margin-bottom: 8pt">
-      <span :style="defaultFontStyle">Unsere Wirksamkeit ist wissenschaftlich bestätigt.</span>
-      <a
-        :style="defaultFontStyle + linkStyle + highlightColor"
-        href="https://rockyourlife.de/das-machen-wir/wirkung/"
-      >
-        Mehr erfahren
-      </a>
-      <br />
-      <span :style="defaultFontStyle">Lust, uns zu unterstützen?</span>
-      <a
-        :style="defaultFontStyle + linkStyle + highlightColor"
-        href="https://rockyourlife.de/jetzt-spenden/?rock-your-life-ggmbh-3/spende"
-      >
-        Hier
-      </a>
-      <span :style="defaultFontStyle">können Sie für uns spenden.</span>
-    </p>
-
-    <p style="margin-bottom: 8pt">
-      <span :style="defaultFontStyle + highlightColor">Mail:&nbsp;&nbsp;&nbsp;</span>
-      <a :style="defaultFontStyle + linkStyle" :href="'mailto:' + email">
-        {{ email || emailPlaceholder }}
-      </a>
-      <br />
-      <span :style="defaultFontStyle + highlightColor">Mobil:&nbsp;&nbsp;</span>
-      <span :style="defaultFontStyle">{{ phone || phonePlaceholder }}</span>
-      <br />
-      <span :style="defaultFontStyle + highlightColor">Web:&nbsp;&nbsp;</span>
-      <a href="http://www.rockyourlife.de/" :style="defaultFontStyle + linkStyle">
-        www.rockyourlife.de
-      </a>
-    </p>
-
-    <p style="margin-bottom: 8pt">
-      <span :style="defaultFontStyle">
-        Sitz der Gesellschaft: München; Amtsgericht München HRB 212 029
-      </span>
-      <br />
-      <span :style="defaultFontStyle">
-        Geschäftsführung: Elisabeth Hahnke, Marvin Hiltrop, Stefan Schabernak
-      </span>
-    </p>
+    <SignaturePreview
+      :first-name="firstName"
+      :first-name-placeholder="firstNamePlaceholder"
+      :last-name="lastName"
+      :last-name-placeholder="lastNamePlaceholder"
+      :position="position"
+      :position-placeholder="positionPlaceholder"
+      :email="email"
+      :email-placeholder="emailPlaceholder"
+      :phone="phone"
+      :phone-placeholder="phonePlaceholder"
+    />
   </main>
 </template>
 
