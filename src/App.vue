@@ -16,6 +16,16 @@ const emailPlaceholder = 'stefan.schabernak@rockyourlife.de'
 
 const phone = ref('')
 const phonePlaceholder = '+49 (0) 89 / 224 106 22'
+
+const signature = ref(null)
+async function copySignature() {
+  try {
+    await navigator.clipboard.writeText(signature.value.innerHTML)
+    alert('HTML Signatur kopiert!')
+  } catch (error) {
+    console.error('Error copying signature: ', error)
+  }
+}
 </script>
 
 <template>
@@ -34,31 +44,37 @@ const phonePlaceholder = '+49 (0) 89 / 224 106 22'
       <input type="text" id="phone" :placeholder="phonePlaceholder" v-model="phone" />
     </div>
 
-    <div class="emailWindow">
-      <div class="menuBar">
-        <span class="close"></span>
-        <span class="minimize"></span>
-        <span class="maximize"></span>
-      </div>
-      <div class="emailHeader">
-        <div>An: Dein Empfänger</div>
-        <div>Betreff: Meine neue E-Mail-Signatur</div>
+    <div class="rightSide">
+      <div class="emailWindow">
+        <div class="menuBar">
+          <span class="close"></span>
+          <span class="minimize"></span>
+          <span class="maximize"></span>
+        </div>
+        <div class="emailHeader">
+          <div>An: Dein Empfänger</div>
+          <div>Betreff: Meine neue E-Mail-Signatur</div>
+        </div>
+
+        <div class="emailBody">
+          <div class="signature" ref="signature">
+            <SignaturePreview
+              :first-name="firstName"
+              :first-name-placeholder="firstNamePlaceholder"
+              :last-name="lastName"
+              :last-name-placeholder="lastNamePlaceholder"
+              :position="position"
+              :position-placeholder="positionPlaceholder"
+              :email="email"
+              :email-placeholder="emailPlaceholder"
+              :phone="phone"
+              :phone-placeholder="phonePlaceholder"
+            />
+          </div>
+        </div>
       </div>
 
-      <div class="emailBody">
-        <SignaturePreview
-          :first-name="firstName"
-          :first-name-placeholder="firstNamePlaceholder"
-          :last-name="lastName"
-          :last-name-placeholder="lastNamePlaceholder"
-          :position="position"
-          :position-placeholder="positionPlaceholder"
-          :email="email"
-          :email-placeholder="emailPlaceholder"
-          :phone="phone"
-          :phone-placeholder="phonePlaceholder"
-        />
-      </div>
+      <button class="button" @click="copySignature">HTML Signatur kopieren</button>
     </div>
   </main>
 </template>
@@ -71,8 +87,11 @@ main {
   align-items: center;
 }
 
-.emailWindow {
+.rightSide {
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form {
@@ -148,5 +167,19 @@ input {
   font-size: 12px;
   color: var(--color-schoolgreen-80);
   margin-bottom: 8px;
+}
+
+.button {
+  margin-top: 32px;
+  background: var(--color-shakemint-80);
+  padding: 16px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+.button:hover {
+  background: var(--color-shakemint-100);
 }
 </style>

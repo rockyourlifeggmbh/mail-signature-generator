@@ -9,7 +9,7 @@
   --color-schoolgreen-100: #23372c;
   --color-schoolgreen-80: #545c56;
 
-  --gradient: linear-gradient(-45deg, #e84610 0%, #e9a09c 100%);
+  --gradient: linear-gradient(45deg, #e84610 0%, #abd4ba 100%);
 }
 
 *,
