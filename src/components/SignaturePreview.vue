@@ -79,9 +79,7 @@ const marginBottom = 'margin-bottom: 8pt;'
         Sitz der Gesellschaft: München; Amtsgericht München HRB 212 029
       </span>
       <br />
-      <span :style="defaultFontStyle">
-        Geschäftsführung: Elisabeth Hahnke, Marvin Hiltrop, Stefan Schabernak
-      </span>
+      <span :style="defaultFontStyle"> Geschäftsführung: Marvin Hiltrop, Stefan Schabernak </span>
     </p>
   </div>
 </template>
