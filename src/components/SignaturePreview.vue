@@ -31,7 +31,7 @@ const marginBottom = 'margin-bottom: 8pt;'
     </p>
 
     <p :style="marginBottom">
-      <img width="115" src="../assets/logo.jpeg" style="margin: 4pt 0" />
+      <img width="115" src="../assets/logo.png" style="margin: 4pt 0" />
       <br />
       <span :style="defaultFontStyle + highlightColor + 'font-weight: bold'">
         ROCK YOUR LIFE! gGmbH
@@ -52,7 +52,7 @@ const marginBottom = 'margin-bottom: 8pt;'
       <span :style="defaultFontStyle">Lust, uns zu unterstützen?</span>
       <a
         :style="defaultFontStyle + linkStyle + highlightColor"
-        href="https://rockyourlife.de/jetzt-spenden/?rock-your-life-ggmbh-3/spende"
+        href="https://rockyourlife.de/spenden/?mtm_campaign=Spenden_Signatur"
       >
         Hier
       </a>
@@ -69,7 +69,10 @@ const marginBottom = 'margin-bottom: 8pt;'
       <span :style="defaultFontStyle">{{ phone || phonePlaceholder }}</span>
       <br />
       <span :style="defaultFontStyle + highlightColor">Web:&nbsp;&nbsp;</span>
-      <a href="http://www.rockyourlife.de/" :style="defaultFontStyle + linkStyle">
+      <a
+        href="http://rockyourlife.de/?mtm_campaign=spendenaktion_signatur_website"
+        :style="defaultFontStyle + linkStyle"
+      >
         www.rockyourlife.de
       </a>
     </p>
