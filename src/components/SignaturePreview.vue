@@ -31,7 +31,7 @@ const marginBottom = 'margin-bottom: 8pt;'
     </p>
 
     <p :style="marginBottom">
-      <img width="115" src="../assets/logo.png" style="margin: 4pt 0" />
+      <img width="115" src="https://rockyourlife.de/wp-content/uploads/logo_mail.png" style="margin: 4pt 0" />
       <br />
       <span :style="defaultFontStyle + highlightColor + 'font-weight: bold'">
         ROCK YOUR LIFE! gGmbH
