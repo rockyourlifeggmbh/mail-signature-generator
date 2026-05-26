@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import SignaturePreview from './components/SignaturePreview.vue'
 
 const firstName = ref('')
-const firstNamePlaceholder = 'Stafan'
+const firstNamePlaceholder = 'Stefan'
 
 const lastName = ref('')
 const lastNamePlaceholder = 'Schabernak'
